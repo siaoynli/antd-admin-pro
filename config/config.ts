@@ -17,9 +17,7 @@ export default defineConfig({
     siderWidth: 208,
   },
   locale: {
-    // default zh-CN
     default: 'zh-CN',
-    // default true, when it is true, will use `navigator.language` overwrite default
     antd: true,
     baseNavigator: true,
   },
@@ -47,20 +45,20 @@ export default defineConfig({
       path: '/welcome',
       name: 'welcome',
       icon: 'smile',
-      component: './Welcome',
+      component: './DashBoard/Welcome',
     },
     {
       path: '/admin',
       name: 'admin',
       icon: 'crown',
       access: 'canAdmin',
-      component: './Admin',
+      // component: './DashBoard/Admin',
       routes: [
         {
           path: '/admin/sub-page',
           name: 'sub-page',
           icon: 'smile',
-          component: './Welcome',
+          component: './DashBoard/Welcome',
         },
       ],
     },
@@ -75,7 +73,7 @@ export default defineConfig({
       redirect: '/welcome',
     },
     {
-      component: './404',
+      component: './ErrorPage/404',
     },
   ],
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
