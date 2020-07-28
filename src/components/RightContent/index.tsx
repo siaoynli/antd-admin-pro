@@ -5,6 +5,7 @@ import { useModel, SelectLang } from 'umi';
 import Avatar from './AvatarDropdown';
 import HeaderSearch from '../HeaderSearch';
 import styles from './index.less';
+import NoticeIcon from '../NoticeIcon';
 
 export type SiderTheme = 'light' | 'dark';
 
@@ -52,16 +53,8 @@ const GlobalHeaderRight: React.FC<{}> = () => {
         //   //console.log('input', value);
         // }}
       />
-      <Tooltip title="使用文档">
-        <span
-          className={styles.action}
-          onClick={() => {
-            window.location.href = 'https://pro.ant.design/docs/getting-started';
-          }}
-        >
-          <QuestionCircleOutlined />
-        </span>
-      </Tooltip>
+
+      <NoticeIcon />
       <Avatar />
       {REACT_APP_ENV && (
         <span>
